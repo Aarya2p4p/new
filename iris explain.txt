@@ -1,0 +1,39 @@
+Import Libraries:
+
+numpy, pandas, matplotlib.pyplot, seaborn: Standard libraries for data manipulation, visualization, and analysis.
+train_test_split from sklearn.model_selection: Splits data into training and testing sets.
+StandardScaler from sklearn.preprocessing: Standardizes features by removing the mean and scaling to unit variance.
+KNeighborsClassifier, RandomForestClassifier, GradientBoostingClassifier from sklearn.neighbors, sklearn.ensemble: Machine learning models for classification.
+accuracy_score, confusion_matrix, classification_report from sklearn.metrics: Evaluation metrics for classification models.
+LabelEncoder from sklearn.preprocessing: Encodes categorical variables into numerical values.
+GridSearchCV from sklearn.model_selection: Performs hyperparameter tuning using grid search.
+Load the Dataset:
+
+The Iris dataset is loaded from a CSV file located at file_path.
+Data Exploration:
+
+Display the first few rows of the dataset using df.head().
+Print information about the dataset using df.info() and statistical summary using df.describe().
+Check for missing values using df.isnull().sum().
+Data Visualization:
+
+Use sns.pairplot to visualize relationships between numerical features, with different colors for each species.
+Plot boxplots for each feature by species using sns.boxplot.
+Feature Engineering:
+
+Encode the target variable 'Species' using LabelEncoder and create a new column 'Species_encoded' with numerical labels.
+Data Preprocessing:
+
+Split the data into features X and target y.
+Split the dataset into training and testing sets using train_test_split.
+Standardize the features using StandardScaler.
+Model Building and Hyperparameter Tuning:
+
+Use GradientBoostingClassifier as the base model.
+Define a parameter grid for hyperparameter tuning with GridSearchCV.
+Fit the grid search on the training data to find the best model.
+Model Evaluation:
+
+Predict on the test set using the best model obtained from grid search.
+Calculate accuracy using accuracy_score, confusion matrix using confusion_matrix, and classification report using classification_report.
+The project aims to classify Iris flowers into different species based on their features. It involves data preprocessing, exploratory data analysis, model selection, hyperparameter tuning, and model evaluation using classification metrics.
